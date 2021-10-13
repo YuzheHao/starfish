@@ -1,0 +1,32 @@
+/*@import url(flowup.css);*/
+
+div.head {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+}
+
+time {
+    font-family: 'Courier New';
+    font-size: 12px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+logo {
+    margin: 50px auto 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+article {
+    font-family: 'Courier New';
+    font-size: 11px;
+    width: 365px;
+    height: auto;
+    margin: 50px auto 0;
+}
