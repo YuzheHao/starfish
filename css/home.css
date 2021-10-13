@@ -5,19 +5,7 @@ body {
     background-size: 100%;
 }
 
-div.head {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 30px;
-}
-
 time {
-    font-family: 'Courier New';
-    font-size: 12px;
-    width: fit-content;
-    margin: 0 auto;
     color: #ffffff;
 }
 
@@ -38,7 +26,6 @@ div.wrap {
 }
 
 a {
-    text-decoration: none;
     color: #ffffff;
 }
 
@@ -48,7 +35,6 @@ a:visited {
 
 li {
     height: 28px;
-
 }
 
 li>a:hover {
@@ -56,8 +42,6 @@ li>a:hover {
 }
 
 span {
-    font-family: 'Courier New';
-    font-size: 12px;
     width: fit-content;
     transition: 0.1s;
 }

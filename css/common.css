@@ -1,0 +1,46 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fade-in;
+    animation-duration: 1s;
+}
+
+div.head {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+}
+
+time {
+    font-family: 'Courier New';
+    font-size: 12px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+logo {
+    margin: 50px auto 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    font-family: 'Courier New';
+    font-size: 12px;
+}
