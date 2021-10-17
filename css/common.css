@@ -44,3 +44,7 @@ span {
     font-family: 'Courier New';
     font-size: 12px;
 }
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,82 @@
+div.head {
+    height: 150px;
+}
+
+span,
+p {
+    font-family: "PingFang SC";
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe {
+    width: 300px;
+}
+
+.recipe>ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+span.first_line {
+    margin: 4px 0 2px 0;
+}
+
+span.last_line {
+    margin: 2px 0 4px 0;
+}
+
+
+span#series,
+span#numero {
+    float: left;
+}
+
+span#amount {
+    float: right;
+}
+
+li {
+    height: 18px;
+}
+
+li>span {
+    font-family: 'Courier New';
+    font-size: 11px;
+    width: fit-content;
+    margin: 2px 0;
+}
+
+li#head_line {
+    height: 34px;
+
+    border-top: 1px solid #000;
+    border-bottom: 0.5px solid #000;
+}
+
+
+
+.card {
+    width: 240px;
+}
+
+#title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#message {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 11px;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+}
