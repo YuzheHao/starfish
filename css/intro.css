@@ -1,0 +1,47 @@
+/*@import url(flowup.css);*/
+
+body {
+    background-image: url('../resource/background-black.png');
+    background-size: 100%;
+}
+
+time {
+    color: #ffffff;
+}
+
+logo {
+    margin: 150px auto 10px;
+}
+
+div.wrap {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color: #ffffff;
+    font-family: 'Courier New';
+    font-size: 12px;
+    margin: 80px auto 10px;
+}
+
+button {
+    font-family: 'Courier New';
+    font-size: 12px;
+    width: 60px;
+    height: 22px;
+    color: #ffffff;
+    background: transparent;
+    border-style: none;
+    margin: 20px 30px 0;
+    transition: 0.1s;
+}
+
+button:hover {
+    background: #ff4000 !important;
+}
+
+a:visited {
+    color: #ffffff;
+}

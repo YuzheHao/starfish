@@ -24,3 +24,12 @@ function update_timestamp() {
         $('time')[0].innerHTML = local
     });
 }
+
+
+
+function random_card(cards) {
+    // export default cards;
+    // import JsonObj from '../data/cards_data.js';
+    pickup = Math.floor(Math.random() * cards.length);
+    console.log(cards[pickup])
+}
