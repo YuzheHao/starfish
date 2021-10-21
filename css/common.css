@@ -13,16 +13,27 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     animation: fade-in;
     animation-duration: 1s;
 }
 
+
 div.head {
-    height: 200px;
     display: flex;
     flex-direction: column;
 
+    height: 20%;
     margin-bottom: 40px;
+}
+
+div.wrap {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 }
 
 time {
@@ -47,4 +58,18 @@ span {
 
 ul {
     list-style: none;
+}
+
+button {
+    font-family: 'Courier New';
+    font-size: 12px;
+    height: 22px;
+    background: transparent;
+    border-style: none;
+    transition: 0.1s;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #ff4000 !important;
 }

@@ -31,5 +31,7 @@ function random_card(cards) {
     // export default cards;
     // import JsonObj from '../data/cards_data.js';
     pickup = Math.floor(Math.random() * cards.length);
-    console.log(cards[pickup])
+    $('#title')[0].innerHTML = cards[pickup].title;
+    $('#message')[0].innerHTML = cards[pickup].message;
+    $('#description')[0].innerHTML = cards[pickup].description;
 }

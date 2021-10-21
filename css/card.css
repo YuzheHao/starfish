@@ -1,7 +1,3 @@
-div.head {
-    height: 150px;
-}
-
 span,
 p {
     font-family: "PingFang SC";
@@ -10,11 +6,28 @@ p {
     font-weight: 200;
 }
 
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*--------------------*/
+
+.card {
+    margin-top: 30px;
+    width: 240px;
+    height: 240px
 }
+
+#title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#message {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 11px;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+}
+
+/*--------------------*/
 
 .recipe {
     width: 300px;
@@ -60,23 +73,4 @@ li#head_line {
 
     border-top: 1px solid #000;
     border-bottom: 0.5px solid #000;
-}
-
-
-
-.card {
-    width: 240px;
-}
-
-#title {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-#message {
-    font-style: italic;
-    font-weight: 200;
-    font-size: 11px;
-    color: #3f3f3f;
-    margin-bottom: 20px;
 }
