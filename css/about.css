@@ -1,0 +1,46 @@
+summary {
+    font-family: 'Courier New';
+    font-size: 12px;
+    margin: 2px auto 2px;
+}
+
+line {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    border-top: 0.5px solid black;
+    margin-top: 6px;
+    margin-bottom: 6px
+}
+
+li {
+    padding: 4px;
+    height: 30px;
+}
+
+span {
+    margin: 0 auto 2px;
+}
+
+
+span.Institute {
+    width: 450px;
+    font-weight: bold;
+    float: left;
+}
+
+span.Location {
+    /*Street/Distract/City, City/Province, Region/Country*/
+    font-style: italic;
+    float: right;
+}
+
+span.Degree {
+    float: left;
+}
+
+span.Period {
+    font-style: italic;
+    color: #DA3732;
+    float: right;
+}

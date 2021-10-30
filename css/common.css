@@ -51,7 +51,8 @@ a {
     text-decoration: none;
 }
 
-span {
+span,
+li {
     font-family: 'Courier New';
     font-size: 12px;
 }
