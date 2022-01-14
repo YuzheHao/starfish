@@ -60,14 +60,14 @@ button#red {
     width: 100px;
     height: 22px;
     color: #ffffff;
-    background: #ff4000 !important;
+    background: #EA3323 !important;
     border-style: none;
     margin: 10px 0 0 0;
     transition: 0.1s;
 }
 
 button#red:hover {
-    background: #cc4000 !important;
+    background: #EA3323 !important;
 }
 
 button#black {

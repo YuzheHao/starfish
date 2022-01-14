@@ -10,8 +10,9 @@ p {
 
 .card {
     margin-top: 30px;
-    width: 240px;
-    height: 240px
+    width: 360px;
+    height: 265px;
+    margin-bottom: 40px;
 }
 
 #title {
