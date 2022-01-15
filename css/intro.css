@@ -32,6 +32,18 @@ button {
     margin: 20px 30px 0;
 }
 
+button#yes:hover {
+    color: #ffffff;
+    background: #D3427C !important;
+    /*background: #EA3323 !important;*/
+}
+
+button#no:hover {
+    color: #ffffff;
+    background: #3FB2C8 !important;
+    /*background: #EA3323 !important;*/
+}
+
 a:visited {
     color: #ffffff;
 }
