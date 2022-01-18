@@ -1,0 +1,52 @@
+p {
+    font-family: "Courier New", "PingFang SC";
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 200;
+    margin-top: 6px;
+    margin-left: 6px;
+    color: #292421
+}
+
+.content {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 500px;
+    width: 900px;
+    margin: 20px auto 40px;
+}
+
+.essay_block {
+    width: 80px;
+    height: 100%;
+    vertical-align: top;
+    transition: 0.2s;
+    display: inline-block;
+    /*margin-left: -4px;*/
+    overflow: hidden;
+
+    background-color: #FFFAF0;
+}
+
+.essay_block img {
+    position: relative;
+    transform: rotate(-10deg);
+    left: -23px;
+    top: 200px;
+}
+
+.detail {
+    position: relative;
+    top: 110px;
+    left: 100px;
+}
+
+
+.essay_block:hover {
+    width: 400px;
+}
+
+.essay_block:hover img {
+    transform: translate(-50px, 0px), rotate(-15deg);
+}
