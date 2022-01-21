@@ -40,6 +40,13 @@ p {
     position: relative;
     top: 110px;
     left: 100px;
+    width: 220px;
+}
+
+.detail p {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 

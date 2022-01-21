@@ -2,6 +2,7 @@ article {
     width: 500px;
     height: auto;
     margin: 20px auto 0;
+    padding: 8px;
 }
 
 span,
@@ -19,4 +20,10 @@ line {
     border-top: 0.5px solid black;
     margin-top: 6px;
     margin-bottom: 6px
+}
+
+.backbutton {
+    position: relative;
+    width: 45px;
+    margin: 40px auto;
 }
