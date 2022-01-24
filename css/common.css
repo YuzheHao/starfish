@@ -1,3 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    animation: fade-in;
+    animation-duration: 1s;
+}
+
+div.head {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    margin-bottom: 40px;
+}
+
+div.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 50px auto 10px;
+}
+
+time {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    height: 22px;
+    background: transparent;
+    border-style: none;
+    transition: 0.1s;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#red {
+    width: 100px;
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#red:hover {
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#black {
+    width: 100px;
+    color: #ffffff;
+    background: #1c1c1c !important;
+}
+
+button#black:hover {
+    color: #ffffff;
+    background: #4c4c4c !important;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -12,65 +85,11 @@
     }
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    animation: fade-in;
-    animation-duration: 1s;
-}
-
-
-div.head {
-    display: flex;
-    flex-direction: column;
-
-    height: 20%;
-    margin-bottom: 40px;
-}
-
-div.wrap {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-}
-
-time {
-    font-family: 'Courier New';
-    font-size: 12px;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-logo {
-    margin: 50px auto 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
 span,
-li {
-    font-family: 'Courier New';
+li,
+p,
+button,
+time {
+    font-family: 'Courier New', "PingFang SC";
     font-size: 12px;
-}
-
-ul {
-    list-style: none;
-}
-
-button {
-    font-family: 'Courier New';
-    font-size: 12px;
-    height: 22px;
-    background: transparent;
-    border-style: none;
-    transition: 0.1s;
-}
-
-button:hover {
-    color: #ffffff;
-    background: #EA3323 !important;
 }
