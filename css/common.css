@@ -88,7 +88,11 @@ button#black:hover {
 span,
 li,
 p,
-button,
+button {
+    font-family: 'Courier New', "PingFang SC";
+    font-size: 11px;
+}
+
 time {
     font-family: 'Courier New', "PingFang SC";
     font-size: 12px;

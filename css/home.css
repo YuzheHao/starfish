@@ -9,6 +9,11 @@ body {
     text-align: left;
 }
 
+span {
+    color: white;
+    font-size: 12px;
+}
+
 li {
     height: 28px;
 }

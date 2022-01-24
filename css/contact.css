@@ -3,6 +3,11 @@ body {
     background-size: 100%;
 }
 
+p {
+    color: #ffffff;
+    font-size: 12px;
+}
+
 div.wrap {
     display: flex;
 }
