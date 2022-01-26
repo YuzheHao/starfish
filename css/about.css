@@ -1,47 +1,67 @@
-summary {
+.article {
     font-family: 'Courier New';
-    font-size: 12px;
-    margin: 2px auto 2px;
+    font-size: 11px;
+    width: 365px;
+    height: auto;
+    margin: 50px auto 0;
 }
 
-line {
+.logo2 {
+    margin: 100px auto 10px;
+    position: relative;
+    left: -15px
+}
+
+.resume {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+    left: -25px;
+    overflow: auto;
+}
+
+.resume line {
     display: flex;
     flex-direction: row;
-    width: 700px;
     border-top: 0.5px solid black;
     margin-top: 6px;
     margin-bottom: 6px
 }
 
-li {
+.resume ul {
+    overflow: auto;
+}
+
+.resume li {
+    overflow: auto;
     padding: 4px;
     height: 30px;
 }
 
-span {
+.resume span {
     margin: 0 auto 2px;
 }
 
-
-span.Institute {
-    width: 450px;
+.resume span.Institute {
+    width: 380px;
     font-weight: bold;
     float: left;
 }
 
-span.Location {
+.resume span.Location {
     /*Street/Distract/City, City/Province, Region/Country*/
     font-style: italic;
     float: right;
+    position: relative;
 }
 
-span.Degree {
+.resume span.Degree {
     float: left;
 }
 
-span.Period {
+.resume span.Period {
     font-style: italic;
     color: #EA3323;
-
     float: right;
+    position: relative;
 }

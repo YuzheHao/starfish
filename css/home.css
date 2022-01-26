@@ -9,20 +9,6 @@ body {
     text-align: left;
 }
 
-span {
-    color: white;
-    font-size: 12px;
-}
-
 li {
     height: 28px;
-}
-
-li>a:hover {
-    background: #EA3323 !important;
-}
-
-span {
-    width: fit-content;
-    transition: 0.1s;
 }

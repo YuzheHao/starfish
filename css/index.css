@@ -8,24 +8,6 @@ p {
     font-size: 12px;
 }
 
-
-button {
-    font-size: 12px;
-    width: 60px;
-    color: #ffffff;
-    margin: 20px 30px 0;
-}
-
-button.yes:hover {
-    color: #ffffff;
-    background: #D3427C !important;
-}
-
-button.no:hover {
-    color: #ffffff;
-    background: #3FB2C8 !important;
-}
-
-a:visited {
-    color: #ffffff;
+lktex {
+    margin: 0px 50px
 }

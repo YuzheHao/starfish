@@ -37,6 +37,21 @@ ul {
     list-style: none;
 }
 
+lktex {
+    color: white;
+    font-size: 12px;
+}
+
+lktex:hover {
+    background: #EA3323 !important;
+
+}
+
+lktex {
+    width: fit-content;
+    transition: 0.05s;
+}
+
 button {
     height: 22px;
     background: transparent;
@@ -93,7 +108,8 @@ button {
     font-size: 11px;
 }
 
-time {
+time,
+lktex {
     font-family: 'Courier New', "PingFang SC";
     font-size: 12px;
 }
