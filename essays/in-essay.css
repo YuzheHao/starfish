@@ -1,8 +1,17 @@
-article {
+.article {
     width: 500px;
     height: auto;
     margin: 20px auto 0;
     padding: 8px;
+}
+
+b.title {
+    font-size: 16px;
+}
+
+b.time {
+    float: right;
+    margin-top: 5px;
 }
 
 span,
@@ -16,14 +25,23 @@ p {
 line {
     display: flex;
     flex-direction: row;
-    width: 500px;
+    width: 100%;
     border-top: 0.5px solid black;
     margin-top: 6px;
     margin-bottom: 6px
 }
 
-.backbutton {
-    position: relative;
-    width: 45px;
-    margin: 40px auto;
+lktex {
+    color: black;
+    width: 40px;
+    margin: 200px auto
+}
+
+lktex:hover {
+    color: white;
+}
+
+.back {
+    width: 40px;
+    margin: 30px auto;
 }

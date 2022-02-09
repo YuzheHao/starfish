@@ -24,25 +24,13 @@ span {
     display: inline-block;
     /*margin-left: -4px;*/
     overflow: hidden;
+    background-color: #fefefc
 }
 
 .brief {
     width: 90px;
     height: 40px;
     padding: 5px;
-    margin: 0 auto;
-    justify-content: center;
-    position: relative;
-    transform: rotate(-20deg);
-    left: -10px;
-    top: 210px;
-    background-color: rgba(249, 247, 243, 0.9);
-    transition: 0.4s;
-    z-index: 2;
-}
-
-.essay_block:hover .brief {
-    transform: rotate(-20deg) translate(50px, 200px);
 }
 
 .detail {
@@ -67,31 +55,4 @@ span {
 
 .essay_block:hover {
     width: 400px;
-}
-
-.block_back {
-    background-size: cover;
-    width: 400px;
-    height: 500px;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-}
-
-.essay_block:hover .block_back {
-    position: relative;
-    top: -92px;
-}
-
-/*————————————————————————————————————————————————*/
-
-.block_back#e1 {
-    background: url('../essays/showcases/001.png');
-}
-
-.block_back#e2 {
-    background: url('../essays/showcases/002.png');
 }
