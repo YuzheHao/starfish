@@ -44,3 +44,19 @@ function today_card(cards) {
     $('#message')[0].innerHTML = cards[pickup].message;
     $('#description')[0].innerHTML = cards[pickup].description;
 }
+
+// function ajax_test() {
+//     console.log('button is clicked')
+//     console.log($('p#AJAX')[0].innerHTML)
+
+//     var xmlhttp;
+//     xmlhttp = new XMLHttpRequest();
+
+//     xmlhttp.open("GET", "https: //firebasestorage.googleapis.com/b/starfish-fdcc7.appspot.com/o/ajax_test.txt", true);
+//     xmlhttp.send();
+
+//     console.log(xmlhttp)
+//     xmlhttp.onreadystatechange = function() {
+//         $('p#AJAX')[0].innerHTML = xmlhttp.responseText;
+//     }
+// }

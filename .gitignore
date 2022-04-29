@@ -1,1 +1,16 @@
 .DS_Store
+work
+_config.yml
+CNAME
+firebase.js
+firebase.json
+package-lock.json
+package.json
+storage.rules
+ui-debug.log
+webpack.config.js
+.idea
+.firebase
+.github
+.firebaserc
+node_modules

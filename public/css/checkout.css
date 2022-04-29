@@ -1,0 +1,20 @@
+span,
+p {
+    font-size: 13px;
+    letter-spacing: 0px;
+    font-weight: 200;
+}
+
+br {
+    line-height: 10%;
+}
+
+.recipe {
+    width: 400px;
+}
+
+#header {
+    font-size: 35px;
+    margin-left: 112px;
+    letter-spacing: 1px;
+}

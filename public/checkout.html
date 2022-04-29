@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<head>
+    <title>レジ</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jsbarcode/3.8.0/JsBarcode.all.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/FIREBASE.js"></script>
+    <script>
+    update_timestamp()
+
+    function change(string) {
+        JsBarcode("#canvascode", string, {
+            format: "CODE128", // 选择要使用的条形码类型
+            width: 2, // 设置条之间的宽度
+            height: 50, // 高度
+            displayValue: false, // 是否在条形码下方显示文字
+        })
+    }
+    setTimeout(function() { change('20220430SAT') }, 800);
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class='recipe'>
+            <br><br><br>
+            <span id='header'><b>STARFISH</b></span><br><br><br>
+            <span id='site_name'>starfish.yuzhehao</span><br>
+            <span id='post_code'>〒157-0996</span><br>
+            <span id='address'>東京都渋谷区渋谷9-9-6 1F</span><br>
+            <span id='customer_mail'>customer@starfish.com</span><br>
+            <span id='site_url'>https://starfish-test.yuzhehao.com</span><br>
+            <span id='terminal'>端末番号: 1B8A</span><br><br>
+            <span>2022-03-16 17:48:45</span>
+            <span style="float:right">取引ID: 8197</span><br>
+            <span style="float:right">スタッフ: 管理者</span>
+            <br>
+            <hr width="100%" color=#000000 SIZE=2>
+            <span style="float:left">HUMAN'S TIME</span>
+            <span style="float:right">3h 6min 19s</span><br>
+            <span style="float:left">STAMINA</span>
+            <span style="float:right">12oz</span><br>
+            <hr width="100%" color=#000000 SIZE=1>
+            <span style="float:left; margin-left:200px">小計</span>
+            <span style="float:right;">3h 6min 19s</span><br>
+            <span style="float:left; margin-left:212px">税</span>
+            <span style="float:right">1,999 JPY</span><br>
+            <span style="float:left; margin-left:200px"><b>合計</b></span>
+            <span style="float:right">3h 6min 19s</span><br>
+            <span style="float:left; margin-left:174px">合計点数</span>
+            <span style="float:right">2点</span><br>
+            <span style="float:left; margin-left:161px">お預り金額</span>
+            <span style="float:right">3h 6min 19s</span><br>
+            <span style="float:left; margin-left:188px">お釣り</span>
+            <span style="float:right">0</span><br>
+            <hr width="100%" color=#000000 SIZE=1>
+            <span style="display:flex; justify-content:center;">
+                <canvas id="canvascode"></canvas>
+            </span>
+            <span style="display:flex; justify-content:center; margin-bottom:12px">
+                <span>2 3 4 9 7 9 1 0 9 2 1 0 1 7 2</span>
+            </span>
+            <hr width="100%" color=#000000 SIZE=2>
+            <p>THANK YOU.</p>
+            <p>ANY RETURNS, ETC. FOR ANY REASONS<br> ARE NOT ACCEPTABLE.</p>
+            <p style="float:right">No.64742052500001</p>
+            <br><br><br><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

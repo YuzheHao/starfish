@@ -19,6 +19,13 @@ div.wrap {
     align-items: center;
 }
 
+.checkout {
+    background-color: #EA3323 !important;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+}
+
 .logo {
     margin: 50px auto 10px;
 }

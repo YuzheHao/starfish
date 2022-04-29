@@ -8,38 +8,32 @@
     <link rel="apple-touch-icon" href="resource/icon.png">
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/FIREBASE.js"></script>
     <script>
-    update_timestamp()
+    update_timestamp();
+    sessionStorage.setItem('TIMESTAMP', Date.now())
     </script>
 </head>
 
 <body>
-    <div class='head' style="margin-top:100px; margin-bottom:100px">
+    <div class='head' style="margin-top:100px; margin-bottom:60px">
         <a href="home.html" class='logo'>
             <img src="resource/starfish_v3.svg" alt="logo" width="200"></a>
         <time style="color:white">20211013</time>
     </div>
     <div class='wrap'>
-        <ul>
-            <li><a href="card.html">
-                    <lktex>card</lktex>
-                </a></li>
-            <li><a href="shop.html">
-                    <lktex>shop</lktex>
-                </a></li>
-            <li><a href="about.html">
-                    <lktex>about</lktex>
-                </a></li>
-            <li><a href="essays.html">
-                    <lktex>essays</lktex>
-                </a></li>
-            <li><a href="contact.html">
-                    <lktex>contact</lktex>
-                </a></li>
-        </ul>
+        <p>I understand this is a personal site with zero academic or commercial purposes (currently).</p>
+        <div style="margin-top:30px">
+            <a href="home.html">
+                <lktex>[Yes]</lktex>
+            </a>
+            <a href="thanks.html">
+                <lktex>[No]</lktex>
+            </a>
+        </div>
     </div>
 </body>
 

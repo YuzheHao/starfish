@@ -9,13 +9,18 @@
     <link rel="stylesheet" type="text/css" href="css/card.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="data/cards-data.js"></script>
+    <script src="js/FIREBASE.js"></script>
     <script>
     update_timestamp()
     </script>
 </head>
 
 <body>
+    <lktex class="checkout">
+        <a href="checkout.html"><b>
+                <-CHECK-OUT->
+            </b></a>
+    </lktex>
     <div class='head'>
         <a href="home.html" class='logo'><img src="resource/banner2.png" alt="logo" width="200"></a>
         <time>20211013</time>
@@ -45,9 +50,8 @@
                 “快乐的时光总是短暂的！”<br>
                 虽然瓶身的广告上这么写着，但它并没有保证加速流逝的时间一定是快乐的。</p>
         </div>
-        <lktex onclick="today_card(cards)">TODAY</lktex>
-        <button onclick="today_card(cards)">TODAY</button>
-        <button onclick="random_card(cards)">random card</button>
+        <button onclick="get_today_card()">TODAY</button>
+        <button onclick="get_random_card()">random card</button>
     </div>
 </body>
 
