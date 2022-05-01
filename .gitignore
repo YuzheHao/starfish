@@ -14,3 +14,4 @@ webpack.config.js
 .github
 .firebaserc
 node_modules
+data

@@ -11,10 +11,16 @@ br {
 
 .recipe {
     width: 400px;
+    padding: 4px;
 }
 
 #header {
     font-size: 35px;
     margin-left: 112px;
     letter-spacing: 1px;
+}
+
+#barcode_number {
+    letter-spacing: 12px;
+    margin-left: 15px;
 }
