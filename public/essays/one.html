@@ -7,8 +7,25 @@
     <title>essay</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/FIREBASE.js"></script>
     <script>
         update_timestamp()
+
+        async function fill_article() {
+            const DocName = await GetRequest('doc');
+            DocPromise = await read_database('essay', DocName);
+            Doc = DocPromise.main
+            Doc = '<p>' + Doc.replace(/   /g, "</p><p>") + '</p>';
+            Doc = Doc.replace(/  /g, "<br>");
+
+            $('.title')[0].innerHTML = DocPromise.title
+            $('.time')[0].innerHTML = DocPromise.time
+            $('.main')[0].innerHTML = Doc
+        }
+
+        $(document).ready(function() {
+            fill_article()
+        })
     </script>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="in-essay.css">
@@ -20,21 +37,15 @@
         <time>20211013</time>
     </div>
     <div class="article">
-        <p> <b class="title">Moonlight</b>
-            <b class="time">02/10/2022 00:35am TYO</b>
+        <p> <b class="title"></b>
+            <b class="time"></b>
         </p>
         <line></line>
-        <p>
-            愿夜幕为我降下勇气，<br>
-            愿群星为我驱散恐惧，<br>
-            愿月光予我指引，<br>
-            让我前进，<br>
-            迈向光明。
-        </p>
+        <div class="main"></div>
     </div>
     <div class="back">
         <a href="../essays.html">
-            <lktex>back</lktex>
+            <lktex>- back -</lktex>
         </a>
     </div>
 </body>

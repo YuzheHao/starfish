@@ -7,8 +7,31 @@
     <title>essays</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="../js/FIREBASE.js"></script>
     <script>
         update_timestamp()
+
+        // 每次有内容更新的时候再用这个重新读写就好了，不用每次都读，要不然访问量太大了
+        async function build() {
+            var show_box = ["001", "002", "003"];
+
+            for (i in show_box) { 
+                DocPromise = await read_database('essay', show_box[i]);
+                essay_block =`
+                    <a class="essay_block" id='${show_box[i]}' href="essays/one?doc=${show_box[i]}">
+                    <div class="brief">
+                        <p id='theme'>${DocPromise.theme}</p>
+                    </div>
+                    <div class="detail">
+                        <p><b id='title'>${DocPromise.title}</b><br>
+                            <t id='time'>${DocPromise.time}</t><br>
+                        </p>
+                        <p id='intro'>${DocPromise.intro}</p>
+                    </div>
+                    </a>`;
+                $('.content')[0].innerHTML += essay_block
+            }
+        }
     </script>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/essays.css">
@@ -24,53 +47,38 @@
         <a href="home.html" class="logo"><img src="resource/banner2.png" alt="logo" width="200"></a>
         <time>20211013</time>
     </div>
-    <div class='content'>
-        <a href="essays/001-house_of_gucci.html">
-            <div class="essay_block">
-                <div class="brief">
-                    <p>"Movie"<br>@Janurary</p>
-                </div>
-                <div class="detail">
-                    <p>
-                        <b>"House of Gucci"</b><br>
-                        01/19/2022 00:35am TYO<br>
-                    </p>
-                    <p>
-                        My random thoughts after it.
-                    </p>
-                </div>
+    <div class="content">
+        <a class="essay_block" id="001" href="essays/one?doc=001">
+            <div class="brief">
+                <p id="theme">"Movie"<br>@Janurary</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">House of Gucci</b><br>
+                    <t id="time">01/19/2022 00:35am TYO</t><br>
+                </p>
+                <p id="intro">My random thoughts after it.</p>
             </div>
         </a>
-        <a href="essays/002-不要解释.html">
-            <div class="essay_block">
-                <div class="brief">
-                    <p>"Thoughts"<br>@Janurary</p>
-                </div>
-                <div class="detail">
-                    <p>
-                        <b>"不要解释"</b><br>
-                        01/21/2022 11:35am TYO<br>
-                    </p>
-                    <p>
-                        Respect the other people's thoughts.
-                    </p>
-                </div>
+        <a class="essay_block" id="002" href="essays/one?doc=002">
+            <div class="brief">
+                <p id="theme">"Thoughts"<br>@Janurary</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">不要解释</b><br>
+                    <t id="time">01/21/2022 11:35am TYO</t><br>
+                </p>
+                <p id="intro">Respect the other people's thoughts.</p>
             </div>
         </a>
-        <a href="essays/003-moonlight.html">
-            <div class="essay_block">
-                <div class="brief">
-                    <p>"Emotion"<br>@Feburary</p>
-                </div>
-                <div class="detail">
-                    <p>
-                        <b>"Moonlight"</b><br>
-                        02/10/2022 00:35am TYO<br>
-                    </p>
-                    <p>
-                        Even in the darkest night, <br>I see moonlight.
-                    </p>
-                </div>
+        <a class="essay_block" id="003" href="essays/one?doc=003">
+            <div class="brief">
+                <p id="theme">"Emotion"<br>@Feburary</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">Moonlight</b><br>
+                    <t id="time">02/10/2022 00:35am TYO</t><br>
+                </p>
+                <p id="intro">Even in the darkest night, <br>I see moonlight.</p>
             </div>
         </a>
     </div>

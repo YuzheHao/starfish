@@ -32,16 +32,16 @@ line {
 }
 
 lktex {
-    color: black;
-    width: 40px;
-    margin: 200px auto
-}
-
-lktex:hover {
+    background-color: #EA3323 !important;
     color: white;
 }
 
+lktex:hover {
+    background-color: #CA0323 !important;
+}
+
+
 .back {
-    width: 40px;
+    width: 60px;
     margin: 30px auto;
 }

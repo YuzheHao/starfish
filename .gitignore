@@ -9,9 +9,9 @@ package.json
 storage.rules
 ui-debug.log
 webpack.config.js
-.idea
 .firebase
 .github
 .firebaserc
 node_modules
 data
+.idea

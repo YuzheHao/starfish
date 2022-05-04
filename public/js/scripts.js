@@ -25,38 +25,15 @@ function update_timestamp() {
     });
 }
 
-
-
-function random_card(cards) {
-    // export default cards;
-    // import JsonObj from '../data/cards_data.js';
-    pickup = Math.floor(Math.random() * cards.length);
-    $('#title')[0].innerHTML = cards[pickup].title;
-    $('#message')[0].innerHTML = cards[pickup].message;
-    $('#description')[0].innerHTML = cards[pickup].description;
+async function GetRequest(VarName) {
+    var url = window.location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest[VarName];
 }
-
-function today_card(cards) {
-    // export default cards;
-    // import JsonObj from '../data/cards_data.js';
-    pickup = cards.length - 1;
-    $('#title')[0].innerHTML = cards[pickup].title;
-    $('#message')[0].innerHTML = cards[pickup].message;
-    $('#description')[0].innerHTML = cards[pickup].description;
-}
-
-// function ajax_test() {
-//     console.log('button is clicked')
-//     console.log($('p#AJAX')[0].innerHTML)
-
-//     var xmlhttp;
-//     xmlhttp = new XMLHttpRequest();
-
-//     xmlhttp.open("GET", "https: //firebasestorage.googleapis.com/b/starfish-fdcc7.appspot.com/o/ajax_test.txt", true);
-//     xmlhttp.send();
-
-//     console.log(xmlhttp)
-//     xmlhttp.onreadystatechange = function() {
-//         $('p#AJAX')[0].innerHTML = xmlhttp.responseText;
-//     }
-// }
