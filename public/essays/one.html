@@ -5,30 +5,32 @@
 
 <head>
     <title>essay</title>
+    <link rel="stylesheet" type="text/css" href="../css/common-NoSpan.css">
+    <link rel="stylesheet" type="text/css" href="in-essay.css">
+    <link rel="stylesheet" type="text/css" href="../css/prism.css">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Code+Pro'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/FIREBASE.js"></script>
+    <script src="../js/prism.js"></script>
     <script>
-        update_timestamp()
+    update_timestamp()
 
-        async function fill_article() {
+    async function fill_info(DocName) {
+        InfoPromise = await read_database('essay', DocName);
+        $('.title')[0].innerHTML = InfoPromise.title
+        $('.time')[0].innerHTML = InfoPromise.time
+    }
+
+    $(document).ready(function() {
+        (async () => {
             const DocName = await GetRequest('doc');
-            DocPromise = await read_database('essay', DocName);
-            Doc = DocPromise.main
-            Doc = '<p>' + Doc.replace(/   /g, "</p><p>") + '</p>';
-            Doc = Doc.replace(/  /g, "<br>");
-
-            $('.title')[0].innerHTML = DocPromise.title
-            $('.time')[0].innerHTML = DocPromise.time
-            $('.main')[0].innerHTML = Doc
-        }
-
-        $(document).ready(function() {
-            fill_article()
-        })
+            fill_info(DocName)
+            fill_main(DocName + '.txt')
+        })()
+        setTimeout('Main_Prism()', 1200);
+    })
     </script>
-    <link rel="stylesheet" type="text/css" href="../css/common.css">
-    <link rel="stylesheet" type="text/css" href="in-essay.css">
 </head>
 
 <body>
@@ -41,7 +43,8 @@
             <b class="time"></b>
         </p>
         <line></line>
-        <div class="main"></div>
+        <div class="main">
+        </div>
     </div>
     <div class="back">
         <a href="../essays.html">

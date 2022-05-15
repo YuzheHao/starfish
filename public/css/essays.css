@@ -54,5 +54,7 @@ span {
 }
 
 .essay_block:hover {
+    z-index: -1;
+    backdrop-filter: blur(3px) brightness(100%);
     width: 400px;
 }

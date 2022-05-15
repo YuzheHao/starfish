@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    animation: fade-in;
+    animation-duration: 1s;
+}
+
+div.head {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    margin-bottom: 40px;
+}
+
+div.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout {
+    background-color: #EA3323 !important;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+}
+
+.logo {
+    margin: 50px auto 10px;
+}
+
+time {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+lktex {
+    color: white;
+    font-size: 12px;
+}
+
+lktex:hover {
+    background: #EA3323 !important;
+
+}
+
+lktex {
+    width: fit-content;
+    transition: 0.05s;
+}
+
+button {
+    height: 22px;
+    background: transparent;
+    border-style: none;
+    transition: 0.1s;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#red {
+    width: 100px;
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#red:hover {
+    color: #ffffff;
+    background: #EA3323 !important;
+}
+
+button#black {
+    width: 100px;
+    color: #ffffff;
+    background: #1c1c1c !important;
+}
+
+button#black:hover {
+    color: #ffffff;
+    background: #4c4c4c !important;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+li,
+p,
+button {
+    font-family: 'Courier New', "PingFang SC";
+    font-size: 11px;
+}
+
+time,
+lktex {
+    font-family: 'Courier New', "PingFang SC";
+    font-size: 12px;
+}
