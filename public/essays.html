@@ -7,18 +7,18 @@
     <title>essays</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="../js/FIREBASE.js"></script>
+    <script src="js/FIREBASE.js"></script>
     <script>
         update_timestamp()
 
         // 每次有内容更新的时候再用这个重新读写就好了，不用每次都读，要不然访问量太大了
         async function build() {
-            var show_box = ["001", "002", "003"];
+            var show_box = ["001", "002", "003", "004", "005", "006","007"];
 
             for (i in show_box) { 
                 DocPromise = await read_database('essay', show_box[i]);
                 essay_block =`
-                    <a class="essay_block" id='${show_box[i]}' href="essays/one?doc=${show_box[i]}">
+                    <a class="essay_block" id='${show_box[i]}' href="essays/one.html?doc=${show_box[i]}">
                     <div class="brief">
                         <p id='theme'>${DocPromise.theme}</p>
                     </div>
@@ -32,6 +32,7 @@
                 $('.content')[0].innerHTML += essay_block
             }
         }
+
     </script>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/essays.css">
@@ -48,7 +49,7 @@
         <time>20211013</time>
     </div>
     <div class="content">
-        <a class="essay_block" id="001" href="essays/one?doc=001">
+        <a class="essay_block" id="001" href="essays/one.html?doc=001">
             <div class="brief">
                 <p id="theme">"Movie"<br>@Janurary</p>
             </div>
@@ -59,7 +60,7 @@
                 <p id="intro">My random thoughts after it.</p>
             </div>
         </a>
-        <a class="essay_block" id="002" href="essays/one?doc=002">
+        <a class="essay_block" id="002" href="essays/one.html?doc=002">
             <div class="brief">
                 <p id="theme">"Thoughts"<br>@Janurary</p>
             </div>
@@ -70,7 +71,7 @@
                 <p id="intro">Respect the other people's thoughts.</p>
             </div>
         </a>
-        <a class="essay_block" id="003" href="essays/one?doc=003">
+        <a class="essay_block" id="003" href="essays/one.html?doc=003">
             <div class="brief">
                 <p id="theme">"Emotion"<br>@Feburary</p>
             </div>
@@ -81,7 +82,50 @@
                 <p id="intro">Even in the darkest night, <br>I see moonlight.</p>
             </div>
         </a>
-    </div>
+        <a class="essay_block" id="004" href="essays/one.html?doc=004">
+            <div class="brief">
+                <p id="theme">"Love"<br>@Feburary</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">:)</b><br>
+                    <t id="time">02/23/2022 02:11am TYO</t><br>
+                </p>
+                <p id="intro">Make perfection perfecter.</p>
+            </div>
+        </a>
+        <a class="essay_block" id="005" href="essays/one.html?doc=005">
+            <div class="brief">
+                <p id="theme">"Scene"<br>@August.21</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">上海</b><br>
+                    <t id="time">08/20/2021 12:16pm SH</t><br>
+                </p>
+                <p id="intro">Begins, then ends.</p>
+            </div>
+        </a>
+        <a class="essay_block" id="006" href="essays/one.html?doc=006">
+            <div class="brief">
+                <p id="theme">"Myself"<br>@April</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">照顾自己</b><br>
+                    <t id="time">04/18/2022 01:10am TYO</t><br>
+                </p>
+                <p id="intro">Treat yourself well at first.</p>
+            </div>
+        </a>
+        <a class="essay_block" id="007" href="essays/one.html?doc=007">
+            <div class="brief">
+                <p id="theme">"Coding"<br>@May</p>
+            </div>
+            <div class="detail">
+                <p><b id="title">Markdown</b><br>
+                    <t id="time">05/14/2022 7:00pm TYO</t><br>
+                </p>
+                <p id="intro">Upon this rock i will build my church.</p>
+            </div>
+        </a></div>
 </body>
 
 </html>
