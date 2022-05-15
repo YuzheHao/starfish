@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>essays</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -16,40 +18,42 @@
             var show_box = ["001", "002", "003", "004", "005", "006","007"];
 
             for (i in show_box) { 
-                DocPromise = await read_database('essay', show_box[i]);
+                InfoPromise = await read_database('essay', show_box[i]);
                 essay_block =`
                     <a class="essay_block" id='${show_box[i]}' href="essays/one.html?doc=${show_box[i]}">
                     <div class="brief">
-                        <p id='theme'>${DocPromise.theme}</p>
+                        <p id='theme'>${InfoPromise.theme}</p>
                     </div>
                     <div class="detail">
-                        <p><b id='title'>${DocPromise.title}</b><br>
-                            <t id='time'>${DocPromise.time}</t><br>
+                        <p><b id='title'>${InfoPromise.title}</b><br>
+                            <t id='time'>${InfoPromise.time}</t><br>
                         </p>
-                        <p id='intro'>${DocPromise.intro}</p>
+                        <p id='intro'>${InfoPromise.intro}</p>
                     </div>
                     </a>`;
                 $('.content')[0].innerHTML += essay_block
+                $(`#${show_box[i]}`)[0].style.backgroundImage = `url('resource/pic-${InfoPromise.series}.png')`;
+                $(`#${show_box[i]}`)[0].style.backgroundSize = 'cover';
             }
         }
-
-    </script>
+        </script>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/essays.css">
+    <script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-Y285KETQBB" async=""></script>
 </head>
 
 <body>
     <lktex class="checkout">
         <a href="checkout.html"><b>
-                <-CHECK-OUT->
+                &lt;-CHECK-OUT-&gt;
             </b></a>
     </lktex>
-    <div class='head'>
+    <div class="head">
         <a href="home.html" class="logo"><img src="resource/banner2.png" alt="logo" width="200"></a>
         <time>20211013</time>
     </div>
     <div class="content">
-        <a class="essay_block" id="001" href="essays/one.html?doc=001">
+        <a class="essay_block" id="001" href="essays/one.html?doc=001" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Movie"<br>@Janurary</p>
             </div>
@@ -60,7 +64,7 @@
                 <p id="intro">My random thoughts after it.</p>
             </div>
         </a>
-        <a class="essay_block" id="002" href="essays/one.html?doc=002">
+        <a class="essay_block" id="002" href="essays/one.html?doc=002" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Thoughts"<br>@Janurary</p>
             </div>
@@ -71,7 +75,7 @@
                 <p id="intro">Respect the other people's thoughts.</p>
             </div>
         </a>
-        <a class="essay_block" id="003" href="essays/one.html?doc=003">
+        <a class="essay_block" id="003" href="essays/one.html?doc=003" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Emotion"<br>@Feburary</p>
             </div>
@@ -82,7 +86,7 @@
                 <p id="intro">Even in the darkest night, <br>I see moonlight.</p>
             </div>
         </a>
-        <a class="essay_block" id="004" href="essays/one.html?doc=004">
+        <a class="essay_block" id="004" href="essays/one.html?doc=004" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Love"<br>@Feburary</p>
             </div>
@@ -93,7 +97,7 @@
                 <p id="intro">Make perfection perfecter.</p>
             </div>
         </a>
-        <a class="essay_block" id="005" href="essays/one.html?doc=005">
+        <a class="essay_block" id="005" href="essays/one.html?doc=005" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Scene"<br>@August.21</p>
             </div>
@@ -104,7 +108,7 @@
                 <p id="intro">Begins, then ends.</p>
             </div>
         </a>
-        <a class="essay_block" id="006" href="essays/one.html?doc=006">
+        <a class="essay_block" id="006" href="essays/one.html?doc=006" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Myself"<br>@April</p>
             </div>
@@ -115,7 +119,7 @@
                 <p id="intro">Treat yourself well at first.</p>
             </div>
         </a>
-        <a class="essay_block" id="007" href="essays/one.html?doc=007">
+        <a class="essay_block" id="007" href="essays/one.html?doc=007" style="background-image: url('resource/pic-anti-gravity-cookies.png'); background-size: cover;">
             <div class="brief">
                 <p id="theme">"Coding"<br>@May</p>
             </div>

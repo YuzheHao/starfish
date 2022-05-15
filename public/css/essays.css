@@ -11,7 +11,7 @@ span {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    height: 500px;
+    height: 300px;
     width: 900px;
     margin: 20px auto 40px;
 }
@@ -35,7 +35,7 @@ span {
 
 .detail {
     position: relative;
-    top: 110px;
+    top: 50px;
     left: 80px;
     width: 220px;
     background-color: rgba(249, 247, 243, 0.9);
