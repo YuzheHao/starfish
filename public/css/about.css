@@ -20,6 +20,15 @@
     overflow: auto;
 }
 
+@media only screen and (max-width: 600px) {
+    .CV-wrap {
+        margin: 0 auto;
+        width: 365px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
 .resume line {
     display: flex;
     flex-direction: row;

@@ -12,6 +12,7 @@
     <script src="js/scripts.js"></script>
     <script>
     update_timestamp()
+    setTimeout("$('.ITEM-wrap')[0].scrollLeft = 1000;", 300);
     </script>
 </head>
 
@@ -25,20 +26,22 @@
         <a href="home.html" class='logo'><img src="resource/banner2.png" alt="logo" width="200"></a>
         <time>20211013</time>
     </div>
-    <div class="item">
-        <div class='photo'>
-            <img src="resource/bag.png" height="450">
-        </div>
-        <div class="info">
-            <span id="title">Okinawa CHURAUMI® Aquarium Canvas Bag</span>
-            <span><b>Ivory</b></span>
-            <br>
-            <span id='descript'>A sturdy canvas bag could be used in multiple situation. The colors of waterblue and ivory remind me of beach and ocean in Okinawa.</span><br> <span id='descript'>CHURAUMI® Aquarium is one of the largest aquarium around the world. It is a definately astonishing experience when a gaint whale shark is swimming beyong your vision.</span>
-            <div class="small_pic" onclick=""><img src="./resource/bag.png"></div>
-            <span id='price'>SF¥</sapn> 5,500
-            </span>
-            <div>
-                <button id="red">add to cart</button> <button id="black">check out</button>
+    <div class="ITEM-wrap">
+        <div class="item">
+            <div class='photo'>
+                <img src="resource/bag.png" height="450">
+            </div>
+            <div class="info">
+                <span id="title">Okinawa CHURAUMI® Aquarium Canvas Bag</span>
+                <span><b>Ivory</b></span>
+                <br>
+                <span id='descript'>A sturdy canvas bag could be used in multiple situation. The colors of waterblue and ivory remind me of beach and ocean in Okinawa.</span><br> <span id='descript'>CHURAUMI® Aquarium is one of the largest aquarium around the world. It is a definately astonishing experience when a gaint whale shark is swimming beyong your vision.</span>
+                <div class="small_pic" onclick=""><img src="./resource/bag.png"></div>
+                <span id='price'>SF¥</sapn> 5,500
+                </span>
+                <div>
+                    <button id="red">add to cart</button> <button id="black">check out</button>
+                </div>
             </div>
         </div>
     </div>

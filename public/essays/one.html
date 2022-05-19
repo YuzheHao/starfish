@@ -17,9 +17,10 @@
     update_timestamp()
 
     async function fill_info(DocName) {
-        InfoPromise = await read_database('essay', DocName);
-        $('.title')[0].innerHTML = InfoPromise.title
-        $('.time')[0].innerHTML = InfoPromise.time
+        InfoPromise = await read_database('essay', 'info');
+        InfoObj = InfoPromise[DocName]
+        $('.title')[0].innerHTML = InfoObj.title
+        $('.time')[0].innerHTML = InfoObj.time
     }
 
     $(document).ready(function() {
