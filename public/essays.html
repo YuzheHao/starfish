@@ -15,27 +15,29 @@
 
         // 每次有内容更新的时候再用这个重新读写就好了，不用每次都读，要不然访问量太大了
         async function build() {
-            var show_box = ["001", "002", "003", "004", "005", "006","007"];
-
-            for (i in show_box) { 
-                InfoPromise = await read_database('essay', show_box[i]);
+            InfoPromise = await read_database('essay', 'info');
+            length = Object.keys(InfoPromise).length + 1
+            for (var i=1; i<length; i++){
+                InfoID = i.toString().padStart(3,'0')
+                var InfoObj = InfoPromise[InfoID]
                 essay_block =`
-                    <a class="essay_block" id='${show_box[i]}' href="essays/one.html?doc=${show_box[i]}">
+                    <a class="essay_block" id='${InfoID}' href="essays/one.html?doc=${InfoID}">
                     <div class="brief">
-                        <p id='theme'>${InfoPromise.theme}</p>
+                        <p id='theme'>${InfoObj.theme}</p>
                     </div>
                     <div class="detail">
-                        <p><b id='title'>${InfoPromise.title}</b><br>
-                            <t id='time'>${InfoPromise.time}</t><br>
+                        <p><b id='title'>${InfoObj.title}</b><br>
+                            <t id='time'>${InfoObj.time}</t><br>
                         </p>
-                        <p id='intro'>${InfoPromise.intro}</p>
+                        <p id='intro'>${InfoObj.intro}</p>
                     </div>
                     </a>`;
                 $('.content')[0].innerHTML += essay_block
-                $(`#${show_box[i]}`)[0].style.backgroundImage = `url('resource/pic-${InfoPromise.series}.png')`;
-                $(`#${show_box[i]}`)[0].style.backgroundSize = 'cover';
+                $(`#${InfoID}`)[0].style.backgroundImage = `url('resource/pic-${InfoObj.series}.png')`;
+                $(`#${InfoID}`)[0].style.backgroundSize = 'cover';
             }
         }
+        build()
         </script>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/essays.css">
@@ -53,83 +55,7 @@
         <time>20211013</time>
     </div>
     <div class="content">
-        <a class="essay_block" id="001" href="essays/one.html?doc=001" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Movie"<br>@Janurary</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">House of Gucci</b><br>
-                    <t id="time">01/19/2022 00:35am TYO</t><br>
-                </p>
-                <p id="intro">My random thoughts after it.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="002" href="essays/one.html?doc=002" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Thoughts"<br>@Janurary</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">不要解释</b><br>
-                    <t id="time">01/21/2022 11:35am TYO</t><br>
-                </p>
-                <p id="intro">Respect the other people's thoughts.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="003" href="essays/one.html?doc=003" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Emotion"<br>@Feburary</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">Moonlight</b><br>
-                    <t id="time">02/10/2022 00:35am TYO</t><br>
-                </p>
-                <p id="intro">Even in the darkest night, <br>I see moonlight.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="004" href="essays/one.html?doc=004" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Love"<br>@Feburary</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">:)</b><br>
-                    <t id="time">02/23/2022 02:11am TYO</t><br>
-                </p>
-                <p id="intro">Make perfection perfecter.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="005" href="essays/one.html?doc=005" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Scene"<br>@August.21</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">上海</b><br>
-                    <t id="time">08/20/2021 12:16pm SH</t><br>
-                </p>
-                <p id="intro">Begins, then ends.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="006" href="essays/one.html?doc=006" style="background-image: url('resource/pic-starfish.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Myself"<br>@April</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">照顾自己</b><br>
-                    <t id="time">04/18/2022 01:10am TYO</t><br>
-                </p>
-                <p id="intro">Treat yourself well at first.</p>
-            </div>
-        </a>
-        <a class="essay_block" id="007" href="essays/one.html?doc=007" style="background-image: url('resource/pic-anti-gravity-cookies.png'); background-size: cover;">
-            <div class="brief">
-                <p id="theme">"Coding"<br>@May</p>
-            </div>
-            <div class="detail">
-                <p><b id="title">Markdown</b><br>
-                    <t id="time">05/14/2022 7:00pm TYO</t><br>
-                </p>
-                <p id="intro">Upon this rock i will build my church.</p>
-            </div>
-        </a></div>
+    </div>
 </body>
 
 </html>
