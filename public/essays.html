@@ -32,7 +32,7 @@
                         <p id='intro'>${InfoObj.intro}</p>
                     </div>
                     </a>`;
-                $('.content')[0].innerHTML += essay_block
+                $('.content')[0].innerHTML = essay_block + $('.content')[0].innerHTML
                 $(`#${InfoID}`)[0].style.backgroundImage = `url('resource/pic-${InfoObj.series}.png')`;
                 $(`#${InfoID}`)[0].style.backgroundSize = 'cover';
             }
